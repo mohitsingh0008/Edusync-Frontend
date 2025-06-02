@@ -21,7 +21,8 @@ const SubmitResult = () => {
     };
 
     try {
-      const response = await fetch("https://localhost:7133/api/Results", {
+      // const response = await fetch("https://localhost:7133/api/Results"
+        const response = await fetch("https://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api/Results", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
