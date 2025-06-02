@@ -143,7 +143,7 @@ const MyEnrollments = () => {
                         {materialsMap[course.courseId].map((mat, idx) => (
                           <li key={idx}>
                             <a
-                               `/api/Materials/download?blobPath=${encodeURIComponent(
+                              href={`/api/Materials/download?blobPath=${encodeURIComponent(
                                 mat.blobPath
                               )}`}
                               // href={`https://localhost:7133/api/Materials/download?blobPath=${encodeURIComponent(
