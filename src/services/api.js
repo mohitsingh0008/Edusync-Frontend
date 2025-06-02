@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create axios instance with better defaults
 const api = axios.create({
-  baseURL: "https://localhost:7133/api", // Adjust backend URL as needed
+  baseURL: "https://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api", // Adjust backend URL as needed
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
