@@ -146,7 +146,7 @@ const MyEnrollments = () => {
                               // href={`https://localhost:7133/api/Materials/download?blobPath=${encodeURIComponent(
                               //   mat.blobPath
                               // )}`
-                                  `https://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api/Materials/download?blobPath=${encodeURIComponent(
+                                  `/api/Materials/download?blobPath=${encodeURIComponent(
                                 mat.blobPath
                               )}`}
                               className="btn btn-sm btn-outline-success"
