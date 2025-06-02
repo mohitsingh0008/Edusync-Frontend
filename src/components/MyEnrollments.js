@@ -140,7 +140,10 @@ const MyEnrollments = () => {
 
                     {materialsMap[course.courseId] && (
                       <ul className="mt-2 list-unstyled">
-                        {materialsMap[course.courseId].map((mat, idx) => (
+                        // {materialsMap[course.courseId].map((mat, idx) => (
+                        {Array.isArray(materialsMap[course.courseId]) &&
+                          materialsMap[course.courseId].map((mat, idx) => (
+
                           <li key={idx}>
                             <a
                               href={`/api/Materials/download?blobPath=${encodeURIComponent(
