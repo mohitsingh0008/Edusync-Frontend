@@ -143,12 +143,13 @@ const MyEnrollments = () => {
                         {materialsMap[course.courseId].map((mat, idx) => (
                           <li key={idx}>
                             <a
+                               `http://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api/Materials/download?blobPath=${encodeURIComponent(
+                                mat.blobPath
+                              )}`}
                               // href={`https://localhost:7133/api/Materials/download?blobPath=${encodeURIComponent(
                               //   mat.blobPath
                               // )}`
-                                  `/api/Materials/download?blobPath=${encodeURIComponent(
-                                mat.blobPath
-                              )}`}
+                                 
                               className="btn btn-sm btn-outline-success"
                               target="_blank"
                               rel="noopener noreferrer"
