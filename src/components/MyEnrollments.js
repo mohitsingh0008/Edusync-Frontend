@@ -46,7 +46,7 @@ const MyEnrollments = () => {
 
     try {
       await axios.delete(
-        `https://localhost:7133/api/enrollments/${userId}/${courseId}`,
+        `/api/enrollments/${userId}/${courseId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setEnrollments((prev) => prev.filter((e) => e.courseId !== courseId));
