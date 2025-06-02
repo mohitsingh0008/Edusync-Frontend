@@ -18,9 +18,9 @@ const MyEnrollments = () => {
   useEffect(() => {
     const fetchEnrollments = async () => {
       try {
-        const res = await axios.get(
+        const res = await axios.get(`api/enrollments/user/${userId}`,
           // `https://localhost:7133/api/enrollments/user/${userId}`
-          `https://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api/enrollments/user/${userId}`,
+          
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -68,9 +68,9 @@ const MyEnrollments = () => {
     setLoadingMaterials((prev) => ({ ...prev, [courseId]: true }));
 
     try {
-      const res = await axios.get(
+      const res = await axios.get(`/api/Materials/course/${courseId}`,
         // `https://localhost:7133/api/Materials/course/${courseId}`
-        `https://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api/Materials/course/${courseId}`,
+        
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -143,7 +143,7 @@ const MyEnrollments = () => {
                         {materialsMap[course.courseId].map((mat, idx) => (
                           <li key={idx}>
                             <a
-                               `http://study-edusync-cga0cgbtane5cefm.centralindia-01.azurewebsites.net/api/Materials/download?blobPath=${encodeURIComponent(
+                               `/api/Materials/download?blobPath=${encodeURIComponent(
                                 mat.blobPath
                               )}`}
                               // href={`https://localhost:7133/api/Materials/download?blobPath=${encodeURIComponent(
